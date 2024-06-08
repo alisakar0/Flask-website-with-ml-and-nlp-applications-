@@ -1,0 +1,24 @@
+from flask import Flask, render_template, request, jsonify
+from pygoogletranslation import Translator
+from bs4 import BeautifulSoup
+import requests
+import os
+import json
+import logging
+import pytesseract
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from nltk.tokenize import sent_tokenize 
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import networkx as nx
+from nltk.sentiment import SentimentIntensityAnalyzer
+import nltk
+
+nltk.download('punkt')
+nltk.download('vader_lexicon')
+
+app = Flask(__name__, static_folder='static')
+results = []
+summarys_folder = 'summarys'  
+
+translator = Translator()

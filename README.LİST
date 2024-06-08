@@ -1,0 +1,38 @@
+# Text Summarization and Translation Web Application
+
+This is a Flask-based web application that provides text summarization and translation services. Users can input text directly, fetch text from a URL, or scan text from an image. The application then generates a summary of the text, and users can choose to translate the summary into a different language.
+
+## Features
+
+- **Text Summarization:** Utilizes TextRank algorithm to summarize input text.
+- **Translation:** Integrates Google Translation API for translating text summaries.
+- **URL Text Extraction:** Allows users to fetch text content from a provided URL.
+- **Image Text Extraction:** Enables users to scan text from uploaded images.
+- **Sentiment Analysis:** Evaluates the sentiment of text content using NLTK's SentimentIntensityAnalyzer.
+- **Web Interface:** Provides a simple web interface for users to interact with.
+
+## Setup
+
+1. Clone the repository:
+git clone git clone https://github.com/alisakar0/myweb.git
+
+2.Go to the project directory:
+cd myweb
+
+3.Create and activate a virtual environment:
+python -m venv venv
+source venv/bin/activate
+
+4.install requirements
+pip install -r requirements.txt
+
+5.run the Application
+python app.py
+
+
+
+
+
+
+
+
